@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
+    <script src="js/script.js"></script>.
 </head>
 
 
@@ -19,7 +20,9 @@
     
     
     <header>
-        <h1>Argego</h1>
+        <a href="index.html"> 
+            <img src="favicon.ico" id="favi">
+        </a>
     </header>
 
 
@@ -34,44 +37,125 @@
                 <li><a href="HTML/contact.html">Contacto</a></li>
             </div>
     
-            <!-- Sección derecha del menú -->
-            <div class="right-section">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+            
+
+
+            
+
+            <!-- Ventana deslizante del carrito -->
+            <div id="ventana-carrito">
+                <h2>Mi Carrito-Ventana</h2>
+                <button id="btn-cerrarCarrito" onclick="toggleCarrito()">X</button>
+                <div id="lista-carrito"></div>
+                <div id="total">Total: $0</div>
+                <button id="btn-vaciarCarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
             </div>
+        
+
+            <div class="right-section">
+                <button id="btn-carrito" onclick="toggleCarrito()">🛒 Carrito</button>
+                <button id="login" onclick="mostrarFormularioInicioSesion()">Login</button>
+                <button id="register" onclick="mostrarFormularioRegistro()">Register</button>
+            </div>
+
+            
         </ul>
     </nav>
 
+    <!-- Contenedor para los formularios -->
+    <div id="formulario"></div>
+
+    <!-- Contenedor para mostrar el estado de la sesión -->
+    <div id="estado-sesion"></div>
     <main>
+        
+        
+
 
         <!-- Sección de productos ***********************************************************************************************************************************-->
         <section class="productos">
             <div class="producto">
                 <a href="HTML/Games/cards.html">
                 <img src="Assets/Images/cards.jpg" alt="Juego 1" loading="lazy">
-                <h3>Juego Argentino 1</h3>
+                <h3>Cards of Prophecy</h3>
                 <p>$500</p>
                 </a>
             </div>
             <div class="producto">
-                <a href="#">
+                <a href="HTML/Games/sente.html">
                 <img src="Assets/Images/sente.jpg" alt="Juego 2" loading="lazy">
-                <h3>Juego Argentino 2</h3>
+                <h3>Sente</h3>
                 <p>$700</p>
                 </a>
             </div>
             <div class="producto">
-                <a href="#">
+                <a href="HTML/Games/theswampDau.html">
                 <img src="Assets/Images/swampd.jpeg" alt="Juego 3" loading="lazy">
-                <h3>Juego Argentino 3</h3>
+                <h3>The Swamp Daughter</h3>
                 <p>$600</p>
                 </a>
             </div>
             <div class="producto">
-                <a href="#">
+                <a href="HTML/Games/talesoftheUn.html">
                 <img src="Assets/Images/tales uncanny.jpg" alt="Juego 4" loading="lazy">
-                <h3>Juego Argentino 4</h3>
+                <h3>Tales of the Uncanny</h3>
                 <p>$1000</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/deadSale.html">
+                <img src="Assets/Images/deadsale.jpg" alt="Juego" loading="lazy">
+                <h3>Dead Sale</h3>
+                <p>$80</p>
+                </a>
+            </div> 
+            <div class="producto">
+                <a href="HTML/Games/Goslimey.html">
+                <img src="Assets/Images/goslime.jpg" alt="Juego" loading="lazy">
+                <h3>Go Slimey Go</h3>
+                <p>$100</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/Madison.html">
+                <img src="Assets/Images/madison2.jpg" alt="Juego" loading="lazy">
+                <h3>Madison</h3>
+                <p>$600</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/Payloader.html">
+                <img src="Assets/Images/payloader.jpg" alt="Juego" loading="lazy">
+                <h3>Payloaders Strike</h3>
+                <p>$450</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/storyteller.html">
+                <img src="Assets/Images/storyteller2.jpg" alt="Juego" loading="lazy">
+                <h3>Storyteller</h3>
+                <p>$750</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/survivingthehumans.html">
+                <img src="Assets/Images/Surviving the humans.jpg" alt="Juego" loading="lazy">
+                <h3>Surviving the Humans</h3>
+                <p>$350</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/100lil.html">
+                <img src="Assets/Images/100 lil.jpg" alt="Juego" loading="lazy">
+                <h3>100 lil jumps</h3>
+                <p>$10</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/asimpledoor.html">
+                <img src="Assets/Images/a simpledoor.jpg" alt="Juego" loading="lazy">
+                <h3>A Simple Door</h3>
+                <p>$200</p>
                 </a>
             </div>
             <!-- Agrega más productos según sea necesario -->

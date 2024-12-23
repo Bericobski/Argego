@@ -52,6 +52,7 @@ li a:hover {
 /* Separación de elementos de la sección derecha */
 .right-section li {
     margin-left: 20px;
+    
 }
 
 /* Responsive: Ajustes para pantallas pequeñas */
@@ -95,12 +96,12 @@ li a:hover {
     justify-content: space-between; /* Espacio entre los productos */
     padding: 20px;
     margin: 0 auto;
-    max-width: 1200px; /* Controla el ancho máximo de la sección */
+    max-width: 1600px; /* Controla el ancho máximo de la sección */
 }
 
 /* Estilos individuales de cada producto */
 .producto {
-    flex: 1 1 calc(33.333% - 20px); /* Cada producto ocupa un tercio del ancho */
+    flex: 1 1 calc(16% - 20px); /* Cada producto ocupa un tercio del ancho */
     margin: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -208,8 +209,8 @@ textarea {
 button {
     display: block;
     width: 100%;
-    padding: 12px;
-    margin-top: 20px;
+    
+    
     background-color: #f09c02;
     color: #1a1a1a;
     font-size: 16px;
@@ -218,6 +219,12 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#btn-contact{
+    padding: 12px;
+    margin-top: 20px;
+}
+
 
 button:hover {
     background-color: #ffa43c;
@@ -349,7 +356,7 @@ button:hover {
 
 /* Contenedor principal de la página de cada juego */
 .game-page {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -389,30 +396,35 @@ button:hover {
 
 .game-price-add {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    text-align: center; /* Alinea el texto de los elementos al centro */
 }
 
 .game-price {
-    font-size: 1.8em;
-    color: #5a67d8;
-    font-weight: bold;
+    font-size: 1.5rem; /* Tamaño del precio */
+    font-weight: bold; /* Resalta el precio */
+    margin-bottom: 0.5rem; /* Espaciado debajo del precio */
 }
 
-.add-to-cart {
-    padding: 10px 20px;
-    background-color: #6c37b1;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.2s;
+.add-to-cart-button {
+    background-color: #f04e30; /* Color de fondo del botón */
+    color: #fff; /* Texto en blanco */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    cursor: pointer; /* Indica que es clickeable */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
 }
 
-.add-to-cart:hover {
-    background-color: #ffc04c;
+.add-to-cart-button:hover {
+    background-color: #d43c22; /* Color más oscuro al pasar el cursor */
 }
+
+
 
 /* Descripción del juego */
 .game-summary {
@@ -451,4 +463,80 @@ button:hover {
 .review p {
     color: #555;
     font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+/* Ventana deslizante del carrito */
+#ventana-carrito {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Oculto inicialmente */
+    width: 300px;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+
+
+
+
+
+
+/* Título de la ventana */
+#ventana-carrito h2 {
+    margin-top: 0px;
+}
+
+#ventana-carrito #btn-cerrarCarrito {
+    margin-top: 0px;
+}
+
+
+
+/* Botón eliminar */
+.btn-eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+/* Total */
+#total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+} 
+
+
+
+#favi{
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+} 
+
+
+
+#formulario{
+    max-width: 50%;
+    margin: 0 auto;
 }
